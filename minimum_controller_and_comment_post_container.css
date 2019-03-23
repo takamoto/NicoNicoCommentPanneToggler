@@ -1,0 +1,82 @@
+@media (max-width:665px) {
+    /*
+    * for ConmmentPostContainer
+    */
+
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .ControllerBoxContainer {
+        height: 60px;
+    }
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .CommentPostContainer,
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .CommentPostContainer-commandInput,
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .CommentCommandInput,
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .CommentInput,
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .CommentPostContainer-postButton {
+        height: 22px;
+    }
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .CommentCommandInput,
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .CommentInput {
+        padding: 4px;
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .CommentPostContainer-commandInput,
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .CommentCommandInput {
+        width: 110px;
+    }
+
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .CommentPostContainer-postButton {
+        width: 85px;
+    }
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .CommentPostButton {
+        min-height: 22px;
+        min-width: 85px;
+        font-size: 11px;
+    }
+
+    /*
+    * for ControllerContainer
+    */
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .ControllerContainer,
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .ControllerButton,
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .PlayerPlayTime {
+        height: 26px;
+    }
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .PlayerPauseButton,
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .PlayerPlayButton {
+        width: 33px;
+    }
+
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .ControllerButton {
+        width: 26px;
+    }
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .ControllerContainer {
+        width: calc(100vw - 16px);
+    }
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .VolumeBarContainer {
+        width: 60px;
+        min-height: 26px;
+    }
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .PlayerPlayTime {
+        line-height: 26px;
+        font-size:11px;
+    }
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .PlayerSkipNextButton {
+        margin-left: 6px;
+    }
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .PlayerSkipToHeadButton {
+        margin-right: 6px;
+    }
+
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .PlayerSeekBackwardButton,
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .PlayerSeekForwardButton,
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .PlayerSkipNextButton {
+        padding: 7px;
+    }
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .ControllerButton-inner {
+        top : 7px;
+        left: 7px;
+        right: 7px;
+        bottom: 7px;
+    }
+}

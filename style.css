@@ -1,0 +1,56 @@
+.ToggleCommentPanelButton {
+    cursor: pointer;
+}
+.MainContainer:not([hidden_comment_panel]) .ToggleCommentPanelButton svg {
+    fill: #39a0ff;
+}
+.MainContainer[hidden_comment_panel] .ToggleCommentPanelButton svg {
+    fill: #fff;
+}
+.MainContainer[hidden_comment_panel] .ToggleCommentPanelButton:hover svg {
+    fill: #007cff;
+    transition: all .2s ease .2s;
+}
+
+
+body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .MainContainer-player {
+    width: 100%;
+}
+body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .MainContainer-commentPanel {
+    position: absolute;
+    left: -32768px;
+}
+
+@media (max-width:1023px) {
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .MainContainer-player {
+        width: calc(100vw - 17px);
+    }
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .VideoContainer {
+        width: calc(100vw - 17px);
+        height: calc((100vw - 17px) / 16 * 9);
+    }
+}
+@media (min-width: 1024px) {
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .VideoContainer {
+        width: 1024px;
+        height: calc(1024px / 16 * 9);
+    }
+}
+@media (min-height: 590px) and (min-width: 1286px) {
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .VideoContainer {
+        width: 1238px;
+        height: calc(1238px / 16 * 9);
+    }
+}
+@media (min-height: 650px) and (min-width: 1392px) {
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .VideoContainer {
+        width: 1344px;
+        height: calc(1344px / 16 * 9);
+    }
+}
+@media (min-height: 850px) and (min-width: 1736px) {
+    body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .VideoContainer {
+        width: 1664px;
+        height: calc(1664px / 16 * 9);
+    }
+}
