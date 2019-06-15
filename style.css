@@ -1,3 +1,4 @@
+/* ToggleCommentPanelButton の見た目 */
 .ToggleCommentPanelButton {
     cursor: pointer;
 }
@@ -12,11 +13,17 @@
     transition: all .2s ease .2s;
 }
 
-
+/* ToggleCommentPanelButton が on かつ非フルスクリーン時、コメントパネルを消してプレイヤーをその分拡大する */
 body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .MainContainer-player {
     width: 100%;
 }
-body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .MainContainer-commentPanel {
+body.is-autoResize:not(.is-fullscreen) .MainContainer[hidden_comment_panel] .MainContainer-playerPanel {
+    /* display: none; では、以下の現象が起こるため駄目
+     *
+     * 1. ToggleCommentPanelButton が on の状態で動画ページを開く
+     * 2. ToggleCommentPanelButton を off にする
+     * 3. コメント欄の内容が正常に表示されない
+     */
     position: absolute;
     left: -32768px;
 }

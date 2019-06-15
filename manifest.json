@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "NiCommenToggle",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "ニコニコ動画のコメント一覧の表示・非表示切り替えボタン追加",
   "content_scripts" : [{
     "matches" : ["http://www.nicovideo.jp/watch/*", "https://www.nicovideo.jp/watch/*"],

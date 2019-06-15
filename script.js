@@ -1,4 +1,5 @@
 (function() {
+    // ToggleCommentPanelButton を生成
     var button = document.createElement("div");
     button.setAttribute("class", "ActionButton ControllerButton ToggleCommentPanelButton");
     button.innerHTML = `
@@ -8,6 +9,9 @@
         </svg>
     </div>
     `;
+
+    // ToggleCommentPanelButton をクリックする毎に
+    // .MainContainer が指定されている要素に hidden_comment_panel アトリビュートをつけ外しする
     button.addEventListener("click", function() {
         var container = document.getElementsByClassName("MainContainer")[0];
         var visible = container.getAttribute("hidden_comment_panel") === null;
@@ -19,8 +23,11 @@
         window.dispatchEvent(new CustomEvent("resize"));
         chrome.storage.local.set({"nicovideo_visible_comment_panel": !visible}, function() {});
     }, false);
+
+    // ボタンをコントロールバー部分に追加
     document.getElementsByClassName("ControllerContainer-area")[2].appendChild(button);
 
+    // ウィンドウ幅がヘッダーよりも狭い場合に、横スクロールにプレイヤーを追従させる
     var style = document.createElement("style");
     document.getElementsByTagName("body")[0].appendChild(style);
     window.addEventListener("scroll", function() {
@@ -29,6 +36,7 @@
         `
     });
 
+    // ToggleCommentPanelButton の on/off の状態をローカルに保存する
     chrome.storage.local.get({'nicovideo_visible_comment_panel': true}, function(result) {
         console.log(result);
         if (!result.nicovideo_visible_comment_panel) button.click();
